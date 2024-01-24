@@ -45,19 +45,25 @@ class App extends Component {
         }) 
       
     }
+
     
       
 
     }
+
+    
     render(){
       return (
     <div className="App">
       <div className='container'>
-        <h1>Welcome</h1>
+        <span className='info-city'>
+       <Weather  city={this.state.city}/>
+        </span>
+        <img className='info-img' src="8999319.png" alt="img weather"/> 
+
       <Form getWeather={this.getWeather} />
       <Weather 
         temperature={this.state.temperature}
-        city={this.state.city}
         country={this.state.country}
         humidity={this.state.humidity}
         description={this.state.description}
